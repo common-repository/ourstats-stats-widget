@@ -1,0 +1,49 @@
+﻿<div class="wrap"> 
+	<form method="post" action="">
+		<fieldset>
+	  <legend><strong>ourSTATS <?php echo $id; ?>. Write in your posts or pages: [ourstats_stats <?php echo $id; ?> /]</strong></legend>
+
+		<br/>	 
+			     Title:
+			      
+                  <input type='text' id='video<?php echo $id; ?>' name='video<?php echo $id; ?>'  value='<?php echo $video; ?>'/>
+                
+			     ourSTATS.de ID <a href="http://www.ourstats.de/?get-the-id=1" target="_blank">get the ID</a>
+			     
+                  <input type='text' id='titles<?php echo $id; ?>' name='titles<?php echo $id; ?>'  value='<?php echo $titles; ?>'/>
+                 <br/><br/>
+			    Hide if is Admin
+			     <select name="autoplay<?php echo $id; ?>" id="autoplay<?php echo $id; ?>">
+			        <option value="1" <?php if($autoplay==1) echo ' selected="selected"'; ?>>Yes</option>
+			        <option value="0" <?php if($autoplay==0) echo ' selected="selected"'; ?>>Non</option>
+		          </select>
+			    Color:
+			     <select name="skin<?php echo $id; ?>" id="skin<?php echo $id; ?>">
+			        <option value="red" <?php if($skin=="red" || $skin=="") echo ' selected="selected"'; ?>>red</option>
+			        <option value="blue" <?php if($skin=="blue") echo ' selected="selected"'; ?>>blue</option>
+			        <option value="green" <?php if($skin=="green") echo ' selected="selected"'; ?>>green</option>
+			        <option value="olive" <?php if($skin=="olive") echo ' selected="selected"'; ?>>olive</option>
+			        <option value="yellow" <?php if($skin=="yellow") echo ' selected="selected"'; ?>>yellow</option>
+			        <option value="purple" <?php if($skin=="purple") echo ' selected="selected"'; ?>>purple</option>
+			        <option value="rose" <?php if($skin=="rose") echo ' selected="selected"'; ?>>rose</option>
+			        <option value="orange" <?php if($skin=="orange") echo ' selected="selected"'; ?>>orange</option>
+                    <option value="slate" <?php if($skin=="slate") echo ' selected="selected"'; ?>>slate</option>
+                    <option value="wheat" <?php if($skin=="wheat") echo ' selected="selected"'; ?>>wheat</option>
+                    <option value="random" <?php if($skin=="random") echo ' selected="selected"'; ?>>random</option>
+             
+		          </select>
+                  
+                  
+                  	    <input name="id" type="hidden" id="id" value="<?php echo $id; ?>" />
+                  <br/><br/>
+	<input type='submit' name='' value='SAVE stats <?php echo $id; ?>' />
+		 
+      </fieldset>
+	</form>		 
+  <form method="post" action=""><br/>
+	  <input name="borrar" type="hidden" id="borrar" value="<?php echo $id; ?>">
+     <input type='submit' name='' value='Delete stats <?php echo $id; ?>' />
+     
+    </form>
+  <hr />
+</div>
